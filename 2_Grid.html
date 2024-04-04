@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .container {
+            margin: 5rem auto;
+            border: 1px solid #ebe3e3;
+            padding: 1rem;
+            height: 350px;
+            width: 600px;
+            background: #f0ebeb;
+        }
+        .container h3 {
+            text-align: center;
+            
+        }
+
+        .container-grid {
+            display: grid;
+            grid-template-areas: 
+            'box-1 box-2 box-2'
+            'box-1 box-3 box-4'
+            'box-5 box-6 box-4';
+            gap: 0.3rem;
+            height: 80%;
+            width: 100%;
+            margin-top: 1rem;
+            
+        }
+        
+        .box-1, .box-2, .box-2, .box-3, .box-4, .box-5, .box-6 {
+            border: 1px solid #ebe3e3;          
+        }
+
+        .box-1 * , .box-2 *, .box-3 *, .box-4 *, .box-5 *, .box-6 *{
+            z-index: 10;
+        }
+        
+        .box-1 h4, .box-2 h4, .box-3 h4, .box-4 h4, .box-5 h4, .box-6 h4 {
+            color: white;
+            font-weight: 300;
+        }
+       
+        .box-1 {
+            grid-area: box-1;
+            background: url(/img/1_tree-736885_1280.jpg) no-repeat center center/cover;
+            /* For centering the number */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        /* Creating black overlay */
+        .box-1::before, .box-2::before, .box-3::before, .box-4::before, .box-5::before, .box-6::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.561);
+            position: absolute;
+        }
+
+        .box-2 {
+            grid-area: box-2;
+            position: relative;
+            background: url(/img/3_avenue-815297_640.jpg) no-repeat center center/cover; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .box-3 {
+            grid-area: box-3;
+            text-align: center;
+            background: url(/img/4_sunset-1373171_640.jpg) no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;              
+        }
+        
+        .box-4 {
+            grid-area: box-4;
+            text-align: center;
+            background: url(/img/5_flowers-19830_640.jpg) no-repeat center center/cover;
+            /* For centering the number */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .box-5 {
+            grid-area: box-5;
+            text-align: center;
+            background: url(/img/6_bird-1045954_640.jpg) no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .box-6{
+            grid-area: box-6;
+            text-align: center;
+            background: url(/img/2_owl-50267_640.jpg) no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Gallery</h3>
+        <div class="container-grid">
+            <div class="box-1"><h4>1</h4></div>
+            <div class="box-2"><h4>2</h4></div>
+            <div class="box-3"><h4>3</h4></div>
+            <div class="box-4"><h4>4</h4></div>
+            <div class="box-5"><h4>5</h4></div>
+            <div class="box-6"><h4>6</h4></div>
+        </div>
+    </div>
+</body>
+</html>

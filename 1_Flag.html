@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Flag</title>
+    <style>
+         .container {
+            margin: 5rem auto;
+            height: 500px;
+            width: 500px;
+        }
+        .flag {
+            height: 250px;
+            width: 470px;
+            background: green;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .flag::before {
+            content: '';
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: red;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flag"></div>
+    </div>
+    
+</body>
+</html>
